@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 25 95% 53%;
+    --primary-foreground: 0 0% 5%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 30 100% 50%;
+    --accent-foreground: 0 0% 5%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 25 95% 53%;
+
+    --radius: 0.75rem;
+
+    /* Custom portfolio tokens */
+    --ember: 25 100% 50%;
+    --ember-glow: 30 100% 60%;
+    --fire-orange: 20 100% 55%;
+    --deep-black: 0 0% 3%;
+    --charcoal: 0 0% 10%;
+
+    /* Gradients */
+    --gradient-ember: linear-gradient(135deg, hsl(25 100% 50%) 0%, hsl(35 100% 45%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 5%) 0%, hsl(0 0% 2%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 10%) 0%, hsl(0 0% 6%) 100%);
+
+    /* Shadows */
+    --shadow-ember: 0 0 40px hsl(25 100% 50% / 0.3);
+    --shadow-card: 0 25px 50px -12px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 0 60px hsl(25 100% 50% / 0.2);
+
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 25 95% 53%;
+    --sidebar-primary-foreground: 0 0% 5%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 25 95% 53%;
+  }
+
+  .dark {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+  }
+}
+
+@layer components {
+  .text-gradient-ember {
+    @apply bg-clip-text text-transparent font-bold;
+    background-image: var(--gradient-ember);
+    filter: drop-shadow(0 0 20px hsl(25 100% 50% / 0.5)) drop-shadow(0 0 40px hsl(30 100% 60% / 0.3));
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px hsl(25 100% 50% / 0.4), 0 0 30px hsl(25 100% 50% / 0.2), 0 0 50px hsl(30 100% 60% / 0.1);
+  }
+
+  .text-glow-white {
+    text-shadow: 0 0 10px hsl(0 0% 100% / 0.3), 0 0 30px hsl(0 0% 100% / 0.15);
+  }
+
+  .bg-gradient-ember {
+    background: var(--gradient-ember);
+  }
+
+  .bg-gradient-dark {
+    background: var(--gradient-dark);
+  }
+
+  .bg-gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .shadow-ember {
+    box-shadow: var(--shadow-ember);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .ember-border {
+    @apply border border-transparent;
+    background: linear-gradient(var(--gradient-card), var(--gradient-card)) padding-box,
+                var(--gradient-ember) border-box;
+  }
+
+  .nav-link {
+    @apply relative overflow-hidden;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-gradient-ember transform scale-x-0 origin-right transition-transform duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply scale-x-100 origin-left;
+  }
+
+  .ember-glow {
+    @apply relative;
+  }
+
+  .ember-glow::before {
+    content: '';
+    @apply absolute inset-0 rounded-full blur-3xl opacity-30;
+    background: hsl(var(--ember));
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Particle effect animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(20px);
+    opacity: 0;
+  }
+}
+
+.particle {
+  animation: float linear infinite;
+}
