@@ -71,51 +71,7 @@ const Contact = () => {
             </motion.p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-16">
-            {/* Contact form */}
-            <motion.div variants={itemVariants}>
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <motion.div whileHover={{ scale: 1.02 }} className="group">
-                    <input
-                      type="text"
-                      placeholder="Your Name"
-                      className="w-full px-6 py-4 bg-card border border-border rounded-xl font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors duration-300"
-                    />
-                  </motion.div>
-                  <motion.div whileHover={{ scale: 1.02 }} className="group">
-                    <input
-                      type="email"
-                      placeholder="Your Email"
-                      className="w-full px-6 py-4 bg-card border border-border rounded-xl font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors duration-300"
-                    />
-                  </motion.div>
-                </div>
-                <motion.div whileHover={{ scale: 1.01 }}>
-                  <input
-                    type="text"
-                    placeholder="Subject"
-                    className="w-full px-6 py-4 bg-card border border-border rounded-xl font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors duration-300"
-                  />
-                </motion.div>
-                <motion.div whileHover={{ scale: 1.01 }}>
-                  <textarea
-                    rows={5}
-                    placeholder="Your Message"
-                    className="w-full px-6 py-4 bg-card border border-border rounded-xl font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors duration-300 resize-none"
-                  />
-                </motion.div>
-                <motion.button
-                  type="submit"
-                  className="w-full px-8 py-4 bg-gradient-ember rounded-xl font-body font-semibold text-primary-foreground shadow-ember transition-all duration-300"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  Send Message
-                </motion.button>
-              </form>
-            </motion.div>
-
+          <div className="max-w-2xl mx-auto">
             {/* Contact info */}
             <motion.div
               variants={itemVariants}
