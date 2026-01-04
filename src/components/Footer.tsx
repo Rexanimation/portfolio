@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, Instagram } from "lucide-react";
 
 import bgVideo from "@/assets/website-bg.mp4";
 
@@ -7,17 +7,17 @@ const socialLinks = [
   {
     name: "GitHub",
     icon: Github,
-    url: "https://github.com",
+    url: "https://github.com/Rexanimation",
   },
   {
     name: "LinkedIn",
     icon: Linkedin,
-    url: "https://linkedin.com",
+    url: "https://www.linkedin.com/in/sahilkumar005/",
   },
   {
-    name: "Twitter",
-    icon: Twitter,
-    url: "https://twitter.com",
+    name: "Instagram",
+    icon: Instagram,
+    url: "https://www.instagram.com/rexanimation.editz/",
   },
 ];
 

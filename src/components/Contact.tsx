@@ -29,14 +29,14 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "hello@sahil.dev",
-      link: "mailto:hello@sahil.dev",
+      value: "rajawatsahil256@gmail.com",
+      link: "mailto:rajawatsahil256@gmail.com",
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+91 XXXXX XXXXX",
-      link: "tel:+91XXXXXXXXXX",
+      value: "+91 92349 10483",
+      link: "tel:+919234910483",
     },
     {
       icon: MapPin,
@@ -169,12 +169,12 @@ const Contact = () => {
                   Let's bring your vision to life
                 </p>
                 <motion.a
-                  href="mailto:hello@sahil.dev"
+                  href="mailto:rajawatsahil256@gmail.com"
                   className="inline-block px-6 py-3 bg-background/20 backdrop-blur-sm rounded-full font-body font-medium text-primary-foreground hover:bg-background/30 transition-colors duration-200"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  hello@sahil.dev
+                  rajawatsahil256@gmail.com
                 </motion.a>
               </motion.div>
             </motion.div>
