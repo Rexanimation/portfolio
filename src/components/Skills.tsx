@@ -6,6 +6,10 @@ const skills = [
   { name: "TypeScript", category: "Frontend", percentage: 90 },
   { name: "Node.js", category: "Backend", percentage: 85 },
   { name: "UI/UX Design", category: "Design", percentage: 88 },
+  { name: "HTML", category: "Frontend", percentage: 98 },
+  { name: "CSS", category: "Frontend", percentage: 98 },
+  { name: "JavaScript", category: "Frontend", percentage: 95 },
+  { name: "Git / GitHub", category: "Version Control", percentage: 90 },
 ];
 
 const Skills = () => {
@@ -26,7 +30,7 @@ const Skills = () => {
   return (
     <section id="skills" className="py-24 relative overflow-hidden min-h-[700px]">
       {/* Dragon Video Background */}
-      <motion.div 
+      <motion.div
         className="absolute inset-0 pointer-events-none"
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
@@ -47,9 +51,9 @@ const Skills = () => {
         >
           <source src={bgVideo} type="video/mp4" />
         </video>
-        
+
         {/* Fiery glow overlay */}
-        <motion.div 
+        <motion.div
           className="absolute inset-0"
           animate={isInView ? {
             background: [
@@ -122,7 +126,7 @@ const Skills = () => {
             >
               {/* Skill Header */}
               <div className="flex justify-between items-center mb-4">
-                <h3 
+                <h3
                   className="text-lg text-foreground tracking-wide font-bold"
                   style={{ fontFamily: "'Cinzel', serif" }}
                 >

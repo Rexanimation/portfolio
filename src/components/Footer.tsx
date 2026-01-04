@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter } from "lucide-react";
 
+import bgVideo from "@/assets/website-bg.mp4";
+
 const socialLinks = [
   {
     name: "GitHub",
@@ -22,6 +24,24 @@ const socialLinks = [
 const Footer = () => {
   return (
     <footer className="py-12 border-t border-border/50 relative overflow-hidden">
+      {/* Video Background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{
+            opacity: 0.3,
+            filter: "brightness(2.0) contrast(1)",
+          }}
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src={bgVideo} type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-background/40" />
+      </div>
+
       {/* Subtle gradient */}
       <div className="absolute inset-0 bg-gradient-to-t from-card/50 to-transparent pointer-events-none" />
 
