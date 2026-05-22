@@ -15,12 +15,12 @@ const projects = [
   },
   {
     id: 2,
-    title: "Coming Soon",
-    category: "Project",
-    description: "Exciting new project in development. Stay tuned for updates.",
-    image: "",
-    liveUrl: "",
-    isComingSoon: true,
+    title: "Sahil GPT",
+    category: "AI Application",
+    description: "An intelligent AI chatbot powered by advanced language models.",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop",
+    liveUrl: "https://gpt-0fyy.onrender.com",
+    isComingSoon: false,
   },
   {
     id: 3,
