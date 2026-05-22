@@ -15,6 +15,15 @@ const projects = [
   },
   {
     id: 2,
+    title: "Pipeline Builder",
+    category: "Web Application",
+    description: "A scalable no-code pipeline builder that allows users to visually construct workflows using reusable nodes, with backend DAG validation to ensure correctness and prevent cyclic pipelines.",
+    image: "https://media.istockphoto.com/id/2221598418/vector/mooring-rope-solid-two-color-icon.webp?a=1&b=1&s=612x612&w=0&k=20&c=ZUPfVXX04LaixA7x9nY_wFQ-D0Zzawg0myNRwxpHXPg=",
+    liveUrl: "https://sahil-kumar-technical-assessment-2.onrender.com",
+    isComingSoon: false,
+  },
+  {
+    id: 3,
     title: "Sahil GPT",
     category: "AI Application",
     description: "An intelligent AI chatbot powered by advanced language models.",
@@ -23,7 +32,7 @@ const projects = [
     isComingSoon: false,
   },
   {
-    id: 3,
+    id: 4,
     title: "Coming Soon",
     category: "Project",
     description: "Another amazing project on the way.",
